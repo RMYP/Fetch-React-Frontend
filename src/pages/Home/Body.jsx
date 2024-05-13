@@ -32,6 +32,9 @@ export default function Dashboard(){
                     Create New Car
                 </Link>
             </button>
+            {isAvailable.length <= 0 && (
+                <p>Cant connect to API, use this repository to access car data "https://github.com/RMYP/Fetch-React-Backend"</p>
+            )}
             {isAvailable.length > 0 && (
             <div className="row row-cols-1 row-cols-md-3 g-4">
                     {isAvailable.map((car) => (
